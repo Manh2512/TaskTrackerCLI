@@ -44,6 +44,7 @@ function InfoFunction(){
     const UsageText = `
     Usage :-
     $ node index.js add "todo item" # Add a new todo
+    $ node index.js update NUMBER   # Update status of a todo
     $ node index.js ls              # Show remaining todos
     $ node index.js del NUMBER      # Delete a todo
     $ node index.js done NUMBER     # Complete a todo
@@ -71,6 +72,31 @@ function listFunction(filename){
     console.table(data);
 
     return n;
+}
+
+function updateStatus(){
+    const updateIndex = args[3];
+    const fileJSON = fs.readFileSync(cwd + 'todo.json', "utf-8"); //a string
+    let todo = JSON.parse(fileJSON);; //parse into array of objects
+
+    let n = todo["Task"].length;
+    if (updateIndex){
+        if(updateIndex >= n || updateIndex < 0){
+            console.log("Error: index doesn't exist!");
+        }else{
+            todo["Status"][updateIndex] = "Doing";
+            
+            fs.writeFile(
+                cwd+"todo.json", JSON.stringify(todo, null, 2),
+                function (err){
+                    if(err) throw err;
+                    console.log("Update todo #"+updateIndex+"!");
+                }
+            );
+        }
+    }else{
+        console.log("No argument passed!");
+    }
 }
 
 function addFunction(){
@@ -186,8 +212,12 @@ function doneFunction(){
 }
 
 switch (args[2]) {
-    case 'add' : {
+    case 'add': {
         addFunction();
+        break;
+    }
+    case 'update': {
+        updateStatus();
         break;
     }
     case 'ls': {
