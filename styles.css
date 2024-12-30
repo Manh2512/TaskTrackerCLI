@@ -1,0 +1,75 @@
+body {
+    background-color: #F0E2E4;
+}
+
+h1 {
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 50%;
+    color: #EAA6B1;
+    font-family: Verdana
+}
+
+#form-container {
+    margin: auto;
+    margin-bottom: 10px;
+    width: 60%
+}
+#reply {
+    width: 60%
+}
+
+table {
+    border: 1px solid #EAA6B1;
+    margin: auto;
+    border-radius: 4px;
+    width: 85%;
+    background-color: #EAA6B1;
+}
+
+thead, tbody{
+    display: block
+}
+
+tbody {
+    max-height: 150px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-family: sans-serif;
+}
+
+th {
+    padding-left: 8px;
+    padding-right: 8px;
+    line-height: 20px;
+    font-family: Verdana;
+    color: #EBDFE1
+}
+
+td {
+    padding-left: 14px;
+    padding-right: 14px;
+    height: 20px;
+    background-color: #EBDFE1;
+    color: #1E1E1E
+}
+
+.task {
+    padding: 5px;
+    width: 52%
+}
+
+.index, .created-at, .status {
+    text-align: center;
+}
+.index {
+    width: 6%
+}
+.created-at {
+    width: 24%
+}
+.status {
+    width: 18%
+}
