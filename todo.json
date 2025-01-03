@@ -1,5 +1,22 @@
-{
-  "Task": [],
-  "Created": [],
-  "Status": []
-}
+[
+  {
+    "task": "This is task 1",
+    "date": "2025-01-03",
+    "status": "Pending"
+  },
+  {
+    "task": "This is task 2",
+    "date": "2025-01-03",
+    "status": "Pending"
+  },
+  {
+    "task": "This is task 3",
+    "date": "2025-01-03",
+    "status": "Pending"
+  },
+  {
+    "task": "One more task",
+    "date": "2025-01-03",
+    "status": "Pending"
+  }
+]

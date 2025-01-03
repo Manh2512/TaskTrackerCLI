@@ -10,16 +10,15 @@
         <main>
             <h1>Task Tracker</h1>
             <div id="form-container">
-                <form id="myForm">
+                <form action="/submit" method="POST" id="myForm">
                     <select name="actions" id="action-choose">
                         <option value="NA">Select</option>
                         <option value="add">Add</option>
                         <option value="update">Update</option>
                         <option value="delete">Delete</option>
-                        <option value="done">Done</option>
                       </select>
-                    <input id="reply" type="text" placeholder="Enter the task/task index">
-                    <button id="submit">Submit</button>
+                    <input name="new-task" id="reply" type="text" placeholder="Enter the task/task index">
+                    <button type="submit">Submit</button>
                 </form>
             </div>
             <table id="todo-list">
@@ -32,38 +31,10 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td class="index">#</td>
-                        <td class="task">Task name</td>
-                        <td class="created-at">YYYY-MM-DD</td>
-                        <td class="status">Status</td>
-                    </tr>
-                    <tr>
-                        <td class="index">#</td>
-                        <td class="task">Task name</td>
-                        <td class="created-at">YYYY-MM-DD</td>
-                        <td class="status">Status</td>
-                    </tr>
-                    <tr>
-                        <td class="index">#</td>
-                        <td class="task">Task name</td>
-                        <td class="created-at">YYYY-MM-DD</td>
-                        <td class="status">Status</td>
-                    </tr>
-                    <tr>
-                        <td class="index">#</td>
-                        <td class="task">Task name</td>
-                        <td class="created-at">YYYY-MM-DD</td>
-                        <td class="status">Status</td>
-                    </tr>
-                    <tr>
-                        <td class="index">#</td>
-                        <td class="task">Task name</td>
-                        <td class="created-at">YYYY-MM-DD</td>
-                        <td class="status">Status</td>
-                    </tr>
+                    
                 </tbody>
             </table>
         </main>
+        <script src="scripts.js"></script>
     </body>
 </html>
