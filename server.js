@@ -20,6 +20,14 @@ function updateFunction(userData){
     existingData[taskIndex]["status"] = "Working";
 }
 
+function editFunction(userData){
+    const regex = /\d+,/;
+    const indexString = userData["task"].match(regex)[0];
+    const taskIndex = parseInt(indexString.slice(0,-1), 10)-1;
+    const editedTask = userData["task"].slice(indexString.length+1, userData["task"].length);
+    existingData[taskIndex]["task"] = editedTask;
+}
+
 function deleteFunction(userData){
     const taskIndex = parseInt(userData["task"], 10)-1;
     existingData.splice(taskIndex, 1);
@@ -53,6 +61,10 @@ app.post("/submit", (req, res) => {
         }
         case "delete": {
             deleteFunction(userData);
+            break;
+        }
+        case "edit": {
+            editFunction(userData);
             break;
         }
     }

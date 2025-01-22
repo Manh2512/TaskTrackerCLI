@@ -30,13 +30,7 @@ function displayTable(jsonFile){
         const status_cell = document.createElement('td');
         status_cell.setAttribute("class", "status");
         status_cell.textContent = row["status"];
-        /*
-        Object.values(row).forEach(value => {
-            const td = document.createElement('td');
-            td.textContent = value;
-            tableRow.appendChild(td);
-        });
-        */
+        
         tableRow.appendChild(task_cell);
         tableRow.appendChild(date_cell);
         tableRow.appendChild(status_cell);

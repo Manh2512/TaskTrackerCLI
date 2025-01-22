@@ -1,22 +1,42 @@
 [
   {
-    "task": "This is task 1",
-    "date": "2025-01-03",
+    "task": "Tutorial preparation for EE2005 W3",
+    "date": "2025-01-17",
+    "status": "Working"
+  },
+  {
+    "task": "Create output images of WNet-GAN model",
+    "date": "2025-01-17",
     "status": "Pending"
   },
   {
-    "task": "This is task 2",
-    "date": "2025-01-03",
+    "task": "Add \"Edit\" action for this Task Tracker",
+    "date": "2025-01-17",
+    "status": "Working"
+  },
+  {
+    "task": "Analyse SSIM reconstruction losses and counting losses of model",
+    "date": "2025-01-17",
+    "status": "Working"
+  },
+  {
+    "task": "Add information menu for Task Tracker",
+    "date": "2025-01-22",
     "status": "Pending"
   },
   {
-    "task": "This is task 3",
-    "date": "2025-01-03",
+    "task": "Update on response sheet of Media Team",
+    "date": "2025-01-22",
     "status": "Pending"
   },
   {
-    "task": "One more task",
-    "date": "2025-01-03",
+    "task": "Playing with Docker",
+    "date": "2025-01-22",
+    "status": "Pending"
+  },
+  {
+    "task": "Edit GitHub repo",
+    "date": "2025-01-22",
     "status": "Pending"
   }
 ]
